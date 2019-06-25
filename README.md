@@ -39,6 +39,20 @@ You can find a full list of Trellis endpoints and schemas here: [Trellis API Doc
           // clicking the "X" button in the top right of the modal.
           onClose: handleTrellisClose,
 
+          // track(event, params)
+          // Similar in meaning to segment.com's analytics.track() call for events occuring
+          // inside the Trellis widget.
+          // event -- the name of the analytics tracking event
+          // params -- a dictionary object of additional event data
+          track: handleTrellisAnalyticsTrack,
+
+          // page(page, params)
+          // Similar in meaning to segment.com's analytics.page() call for pageviews occuring
+          // inside the Trellis widget.  We fire a page() call for every widget screen.
+          // page -- the name of the page visited
+          // params -- a dictionary object of additional pageview data
+          page: handleTrellisAnalyticsPage,
+
           // A URL that is called asynchronously by the Trellis API when it has completed
           // pulling insurance data.
           webhook: 'https://api.myserver.com/trellisUpdate'

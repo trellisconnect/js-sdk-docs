@@ -55,7 +55,11 @@ You can find a full list of Trellis endpoints and schemas here: [Trellis API Doc
 
           // A URL that is called asynchronously by the Trellis API when it has completed
           // pulling insurance data.
-          webhook: 'https://api.myserver.com/trellisUpdate'
+          webhook: 'https://api.myserver.com/trellisUpdate',
+          
+          // An list of strings which denote various UI derivations. These strings are typically in the form of a
+          // (e.g 1, 5, 8)
+          experiments: []
         });
         document.getElementById('openTrellisButton').onclick = handler.open;
 })();

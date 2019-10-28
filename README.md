@@ -12,6 +12,7 @@ You can find a full list of Trellis endpoints and schemas here: [Trellis API Doc
 2. Configure a handler using `TrellisConnect.configure()` as shown in the example.
 3. Call your handler's `open()` method, and Trellis will present a modal dialog enabling the user to connect his or her insurance account.
 4. Have your `onSuccess` method pass the `accountId` to your application server, which can call Trellis API endpoints to retrieve information about that account. (Note: Your application server – not your web and mobile clients - should access the Trellis API because such access requires the use of your Trellis `API_SECRET_KEY`, which should never be publicly disseminated.)
+5. Appending the URL paramter ?t=1 to the URL of the page where the SDK is present will create an additional "Trellis Demo" provider. This provider will allow you to authenticate with the SDK as a client without needing to provide real account information. 
 
 ```
 <script src="https://cdn.trellisconnect.com/sdk/v1.1/trellis-connect.js"></script>
@@ -55,14 +56,20 @@ You can find a full list of Trellis endpoints and schemas here: [Trellis API Doc
 
           // A URL that is called asynchronously by the Trellis API when it has completed
           // pulling insurance data.
-          webhook: 'https://api.myserver.com/trellisUpdate'
+          webhook: 'https://api.myserver.com/trellisUpdate',
+          
+          // This allows the widget to not maintain sessions between page reloads. 
+          // For production use you will likely want to remove this option.
+          features: 'nostickystate'
         });
         document.getElementById('openTrellisButton').onclick = handler.open;
 })();
 </script>
 ```
 
-# CHANGELOG
 
+# CHANGELOG
+* 10/28/2019
+  * Updated Documentation of configuration options. Added documentation for sticky sessions/no sticky sessions. Added documentation for enabling the Demo provider. 
 * 5/10/2019
   *  Renamed "key" to "client_id".  The tokens remain the same, this only rename of the field in this SDK.  There is an analogous rename in the [API Documentation](https://trellisconnect.com/docs) of the header from X-API-KEY to X-CLIENT-ID.  This was done to avoid confusion with the old names of API KEY and API SECRET KEY.

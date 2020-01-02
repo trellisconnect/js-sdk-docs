@@ -52,10 +52,6 @@ You can find a full list of Trellis endpoints and schemas here: [Trellis API Doc
           // page -- the name of the page visited
           // params -- a dictionary object of additional pageview data
           page: handleTrellisAnalyticsPage,
-
-          // A URL that is called asynchronously by the Trellis API when it has completed
-          // pulling insurance data.
-          webhook: 'https://api.myserver.com/trellisUpdate'
         });
         document.getElementById('openTrellisButton').onclick = handler.open;
 })();

@@ -13,7 +13,7 @@ You can find a full list of Trellis endpoints and schemas here: [Trellis API Doc
 3. Call your handler's `open()` method, and Trellis will present a modal dialog enabling the user to connect his or her insurance account.
 4. Have your `onSuccess` method pass the `accountId` to your application server, which can call Trellis API endpoints to retrieve information about that account. (Note: Your application server – not your web and mobile clients - should access the Trellis API because such access requires the use of your Trellis `API_SECRET_KEY`, which should never be publicly disseminated.)
 
-```
+```html
 <script src="https://cdn.trellisconnect.com/sdk/v1.1/trellis-connect.js"></script>
 <a href='#' id='openTrellisButton'>Open Trellis</a>
 <script>

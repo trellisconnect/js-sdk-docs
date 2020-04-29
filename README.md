@@ -68,7 +68,7 @@ The destroy function allows you to destroy the Trellis handler instance, properl
 
 ```html
 <script>
-  // Create the Savvy handler
+  // Create the Trellis handler
   var handler = TrellisConnect.configure({ client_id: '<API_CLIENT_ID>' });
 
   // Destroy handler

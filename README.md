@@ -1,17 +1,15 @@
 ![Trellis Logo](https://cdn.trellisconnect.com/sdk/v1.1/js-sdk/assets/images/header.png)
 
-Drop-in React-based widget for clients to easily access a user's current insurance information.
+Easily access a user's insurance information using Trellis Connect.
 
-# API Docs
+## Instructions
 
-You can find a full list of Trellis endpoints and schemas here: [Trellis API Docs](https://trellisconnect.com/docs)
-
-# Usage
-
-1. Include our SDK on your page.
+1. Include the Trellis Connect JS SDK on your page.
 2. Configure a handler using `TrellisConnect.configure()` as shown in the example.
 3. Call your handler's `open()` method, and Trellis will present a widget enabling the user to connect his or her insurance account.
-4. Have your `onSuccess` method pass the `accountId` to your application server, which can call Trellis API endpoints to retrieve information about that account. (Note: Your application server – not your web and mobile clients - should access the Trellis API because such access requires the use of your Trellis `API_SECRET_KEY`, which should never be publicly disseminated.)
+4. Use `accountId` from the SDK's `onSuccess()` callback to access the user's insurance information. Client applications can use the account's Temporary Access Key and server applications can use the Secret Key provided by your Trellis account manager..
+
+## Example
 
 ```html
 <script src="https://cdn.trellisconnect.com/sdk/v1.1/trellis-connect.js"></script>

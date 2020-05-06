@@ -7,7 +7,7 @@ Easily access a user's insurance information using Trellis Connect.
 1. Include the Trellis Connect JS SDK on your page.
 2. Configure a handler using `TrellisConnect.configure()` as shown in the example.
 3. Call your handler's `open()` method, and Trellis will present a widget enabling the user to connect his or her insurance account.
-4. Use `accountId` from the SDK's `onSuccess()` callback to access the user's insurance information. Client applications can use the account's Temporary Access Key and server applications can use the Secret Key provided by your Trellis account manager..
+4. Use `accountId` from the SDK's `onSuccess()` callback to access the user's insurance information. Client applications can use the account's Temporary Access Key and server applications can use the Secret Key provided by your Trellis account manager.
 
 ## Example
 

@@ -9,7 +9,26 @@ Easily access a user's insurance information using Trellis Connect.
 3. Call your handler's `open()` method, and Trellis will present a widget enabling the user to connect his or her insurance account.
 4. Use `accountId` from the SDK's `onSuccess()` callback to access the user's insurance information. Client applications can use the account's Temporary Access Key and server applications can use the Secret Key provided by your Trellis account manager.
 
-## Example
+## Basic Example
+
+```html
+<script src="https://cdn.trellisconnect.com/sdk/v1.1/trellis-connect.js"></script>
+<a href="#" id="openTrellisButton">Open Trellis</a>
+<script>
+  (function () {
+    var handler = TrellisConnect.configure({
+      // Your Trellis Client-ID
+      client_id: '<API_CLIENT_ID>',
+
+      // onSuccess(accountId, metadata)
+      onSuccess: handleTrellisSuccess,
+    });
+    document.getElementById('openTrellisButton').onclick = handler.open;
+  })();
+</script>
+```
+
+## Advanced Features
 
 ```html
 <script src="https://cdn.trellisconnect.com/sdk/v1.1/trellis-connect.js"></script>
@@ -41,28 +60,17 @@ Easily access a user's insurance information using Trellis Connect.
         // }
       },
 
-      // track(event, params)
-      // Similar in meaning to segment.com's analytics.track() call for events occuring
-      // inside the Trellis widget.
-      // event -- the name of the analytics tracking event
-      // params -- a dictionary object of additional event data
-      track: handleTrellisAnalyticsTrack,
-
-      // page(page, params)
-      // Similar in meaning to segment.com's analytics.page() call for pageviews occuring
-      // inside the Trellis widget.  We fire a page() call for every widget screen.
-      // page -- the name of the page visited
-      // params -- a dictionary object of additional pageview data
-      page: handleTrellisAnalyticsPage,
+      // onEvent(event, params)
+      onEvent: handleEvent,
     });
     document.getElementById('openTrellisButton').onclick = handler.open;
   })();
 </script>
 ```
 
-### destroy() function
+### Removing JS SDK with destroy()
 
-The destroy function allows you to destroy the Trellis handler instance, properly removing any DOM artifacts that were created by it. This function will fail if called when Trellis Widget is open.
+destroy() allows you to remove all DOM artifacts created by JS SDK. This function will fail if called when Trellis Widget is open.
 
 ```html
 <script>

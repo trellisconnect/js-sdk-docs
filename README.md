@@ -84,6 +84,8 @@ destroy() allows you to remove all DOM artifacts created by JS SDK. This functio
 
 # CHANGELOG
 
+- 7/22/2020
+  - Updated to use `connectionId` instead of `accountId`
 - 4/28/2020
   - Added "destroy" documentation
 - 4/07/2020

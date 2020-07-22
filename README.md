@@ -7,7 +7,7 @@ Easily access a user's insurance information using Trellis Connect.
 1. Include the Trellis Connect JS SDK on your page.
 2. Configure a handler using `TrellisConnect.configure()` as shown in the example.
 3. Call your handler's `open()` method, and Trellis will present a widget enabling the user to connect his or her insurance account.
-4. Use `accountId` from the SDK's `onSuccess()` callback to access the user's insurance information. Client applications can use the account's Temporary Access Key and server applications can use the Secret Key provided by your Trellis account manager.
+4. Use `connectionId` from the SDK's `onSuccess()` callback to access the user's insurance information. Client applications can use the connection's Temporary Access Key and server applications can use the Secret Key provided by your Trellis account manager.
 
 ## Basic Example
 
@@ -20,7 +20,7 @@ Easily access a user's insurance information using Trellis Connect.
       // Your Trellis Client-ID
       client_id: '<API_CLIENT_ID>',
 
-      // onSuccess(accountId, metadata)
+      // onSuccess(connectionId, metadata)
       onSuccess: handleTrellisSuccess,
     });
     document.getElementById('openTrellisButton').onclick = handler.open;
@@ -39,11 +39,11 @@ Easily access a user's insurance information using Trellis Connect.
       // Your trellis API Client-Id
       client_id: '<API_CLIENT_ID>',
 
-      // onSuccess(accountId, metadata)
+      // onSuccess(connectionId, metadata)
       // Called when TrellisConnect has completed retrieving policy information from the user.
-      // The function is passed in an accountId and a metadata object. The accountId can be
+      // The function is passed in an connectionId and a metadata object. The connectionId can be
       // used by application server, combined with your Trellis API-SECRET-KEY to pull policy data.
-      // The metadata contains summary information about the account connected.
+      // The metadata contains summary information about the connection.
       onSuccess: handleTrellisSuccess,
 
       // onFailure()

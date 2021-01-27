@@ -39,10 +39,10 @@ Easily access a user's insurance information using Trellis Connect.
       // Your trellis API Client-Id
       client_id: '<API_CLIENT_ID>',
 
-      // The `showConfirmClose` property controls the close confirmation screen
+      // The `closeConfirmation` property controls the close confirmation screen
       // that appears when a users attempts to exit the flow. Setting to false
       // will close the widget immediately.
-      showConfirmClose: true,
+      closeConfirmation: true,
 
       // onSuccess(connectionId, metadata)
       // Called when TrellisConnect has completed retrieving policy information from the user.

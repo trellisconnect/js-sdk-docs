@@ -39,6 +39,11 @@ Easily access a user's insurance information using Trellis Connect.
       // Your trellis API Client-Id
       client_id: '<API_CLIENT_ID>',
 
+      // Set `closeConfirmation` to `false` to have users skip the confirmation dialog after clicking the close button.
+      // that appears when a users attempts to exit the flow. Setting to false
+      // will close the widget immediately.
+      closeConfirmation: true,
+
       // onSuccess(connectionId, metadata)
       // Called when TrellisConnect has completed retrieving policy information from the user.
       // The function is passed in an connectionId and a metadata object. The connectionId can be

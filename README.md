@@ -57,9 +57,45 @@ Easily access a user's insurance information using Trellis Connect.
       // Called when the user closes the widget -- either when they have
       // successfully loaded their policies (potentially after an onSuccess() call) or by
       // clicking the "X" button in the top right of the widget.
+      //
+      // Metadata:
+      //   reason: The action the user took to close the widget. One of the following values.
+      //     * Clicked browser back button
+      //     * Clicked close button
+      //     * Clicked exit button
+      //     * Completed Connect flow
+      //     * Existing customer
+      //
+      //   status: The point at which the user exited the Link flow. One of the following values.
+      //     * Intro
+      //     * Consent
+      //     * Issuer
+      //     * Credentials
+      //     * Forgot Password
+      //     * Create Account
+      //     * Issuer Website
+      //     * Login Success
+      //     * MFA Token
+      //     * MFA Selection
+      //     * No Insurance
+      //     * Account Loading
+      //     * Policy Loaded
+      //     * Have Login
+      //     * Remember Login
+      //     * Create Account Step 2
+      //     * Create Account Login
+      //     * Create Account Results
+      //     * Create Account Email Sent
+      //     * Forgot Password Results
+      //     * Policy Only Complete
+      //     * Unsupported Issuer
+      //     * Unqualified
+      //     * Not Insured
       onClose: function (error, metadata) {
         // metadata = {
         //   trellisSessionId: 'f5d62241-6a9a-46cb-bae4-b4972d54fb58'
+        //   reason: 'Clicked close button',
+        //   status: 'Credentials',
         // }
       },
 

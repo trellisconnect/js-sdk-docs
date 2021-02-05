@@ -94,8 +94,8 @@ Easily access a user's insurance information using Trellis Connect.
       onClose: function (error, metadata) {
         // metadata = {
         //   trellisSessionId: 'f5d62241-6a9a-46cb-bae4-b4972d54fb58'
-        //   reason: 'Clicked close button',
-        //   status: 'Credentials',
+        //   reason: 'clicked_close_button',
+        //   view_name: 'Credentials',
         // }
       },
 

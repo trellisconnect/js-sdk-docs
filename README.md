@@ -60,13 +60,13 @@ Easily access a user's insurance information using Trellis Connect.
       //
       // Metadata:
       //   reason: The action the user took to close the widget. One of the following values.
-      //     * Clicked browser back button
-      //     * Clicked close button
-      //     * Clicked exit button
-      //     * Completed Connect flow
-      //     * Existing customer
+      //     * clicked_browser_back_button
+      //     * clicked_close_button
+      //     * clicked_exit_button
+      //     * completed_connect_flow
+      //     * existing_customer
       //
-      //   status: The point at which the user exited the Link flow. One of the following values.
+      //   phase: The point at which the user exited the Link flow. One of the following values.
       //     * Intro
       //     * Consent
       //     * Issuer

@@ -66,7 +66,7 @@ Easily access a user's insurance information using Trellis Connect.
       //     * completed_connect_flow
       //     * existing_customer
       //
-      //   phase: The point at which the user exited the Link flow. One of the following values.
+      //   view_name: The point at which the user exited the Link flow. One of the following values.
       //     * Intro
       //     * Consent
       //     * Issuer

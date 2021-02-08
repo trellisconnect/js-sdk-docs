@@ -63,7 +63,7 @@ Easily access a user's insurance information using Trellis Connect.
       //     * issuer_selection - User prompted to select or search for their current issuer
       //     * issuer_not_found - User searched for their issuer and Connect found no results
       //     * unsupported_issuer - User selected an insurer that Connect does not support
-      //     * consent - User prompted to accept Trellis' terms and conditions
+      //     * trellis_consent - User prompted to accept Trellis' terms and conditions
       //     * unqualified - The user does not have authentication setup with his or her insurer (e.g. has no login)
       //     * requires_credentials - User prompted to provide credentials for the selected issuer
       //     * requires_questions - User prompted to answer security questions
@@ -102,6 +102,8 @@ destroy() allows you to remove all DOM artifacts created by JS SDK. This functio
 
 # CHANGELOG
 
+- 2/8/2021
+  - Added metadata.status to onClose()
 - 7/22/2020
   - Updated to use `connectionId` instead of `accountId`
 - 4/28/2020

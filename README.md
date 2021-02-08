@@ -59,7 +59,7 @@ Easily access a user's insurance information using Trellis Connect.
       // clicking the "X" button in the top right of the widget.
       //
       // Metadata:
-      //   status: The point at which the user exited the Link flow. One of the following values.
+      //   status: The point at which the user exited the Connect flow. One of the following values.
       //     * issuer_selection - User prompted to select an issuer
       //     * issuer_not_found - User was unable to find their issuer
       //     * unsupported_issuer - User selected an unsupported issuer

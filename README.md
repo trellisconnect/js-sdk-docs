@@ -57,9 +57,25 @@ Easily access a user's insurance information using Trellis Connect.
       // Called when the user closes the widget -- either when they have
       // successfully loaded their policies (potentially after an onSuccess() call) or by
       // clicking the "X" button in the top right of the widget.
+      //
+      // Metadata:
+      //   status: The point at which the user exited the Connect flow. One of the following values.
+      //     * issuer_selection - User prompted to select an issuer
+      //     * issuer_not_found - User was unable to find their issuer
+      //     * unsupported_issuer - User selected an unsupported issuer
+      //     * trellis_consent - User prompted to accept Trellis' consent
+      //     * has_online_login - User prompted to answer if they have an online login for their issuer
+      //     * create_account - User prompted to create a login if they responded "no" to having an online login
+      //     * requires_credentials - User prompted to provide credentials for the selected issuer
+      //     * requires_questions - User prompted to answer security questions
+      //     * requires_selections - User prompted to answer multiple choice question(s)
+      //     * requires_code - User prompted to provide a one-time passcode
+      //     * choose_device - User prompted to select a device on which to receive a one-time passcode
+      //     * existing_client - User selected the client as their current issuer
       onClose: function (error, metadata) {
         // metadata = {
         //   trellisSessionId: 'f5d62241-6a9a-46cb-bae4-b4972d54fb58'
+        //   status: 'existing_client',
         // }
       },
 

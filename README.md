@@ -63,7 +63,9 @@ Easily access a user's insurance information using Trellis Connect.
       //     * issuer_selection
       //     * issuer_not_found
       //     * unsupported_issuer
+      //     * trellis_consent
       //     * create_account
+      //     * has_online_login
       //     * requires_credentials
       //     * requires_questions
       //     * requires_selections

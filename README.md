@@ -59,43 +59,21 @@ Easily access a user's insurance information using Trellis Connect.
       // clicking the "X" button in the top right of the widget.
       //
       // Metadata:
-      //   reason: The action the user took to close the widget. One of the following values.
-      //     * clicked_browser_back_button
-      //     * clicked_close_button
-      //     * clicked_exit_button
-      //     * completed_connect_flow
-      //     * existing_customer
-      //
-      //   view_name: The point at which the user exited the Link flow. One of the following values.
-      //     * Intro
-      //     * Consent
-      //     * Issuer
-      //     * Credentials
-      //     * Forgot Password
-      //     * Create Account
-      //     * Issuer Website
-      //     * Login Success
-      //     * MFA Token
-      //     * MFA Selection
-      //     * No Insurance
-      //     * Account Loading
-      //     * Policy Loaded
-      //     * Have Login
-      //     * Remember Login
-      //     * Create Account Step 2
-      //     * Create Account Login
-      //     * Create Account Results
-      //     * Create Account Email Sent
-      //     * Forgot Password Results
-      //     * Policy Only Complete
-      //     * Unsupported Issuer
-      //     * Unqualified
-      //     * Not Insured
+      //   status: The point at which the user exited the Link flow. One of the following values.
+      //     * issuer_selection
+      //     * issuer_not_found
+      //     * unsupported_issuer
+      //     * create_account
+      //     * requires_credentials
+      //     * requires_questions
+      //     * requires_selections
+      //     * requires_code
+      //     * choose_device
+      //     * existing_client
       onClose: function (error, metadata) {
         // metadata = {
         //   trellisSessionId: 'f5d62241-6a9a-46cb-bae4-b4972d54fb58'
-        //   reason: 'clicked_close_button',
-        //   view_name: 'Credentials',
+        //   status: 'existing_client',
         // }
       },
 

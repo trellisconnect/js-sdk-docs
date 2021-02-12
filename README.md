@@ -39,6 +39,13 @@ Easily access a user's insurance information using Trellis Connect.
       // Your trellis API Client-Id
       client_id: '<API_CLIENT_ID>',
 
+      // The user object allows you to provide additional information about the user to be appended
+      // reports. All fields are optional. 
+      user: {
+        // An identifier you determine and submit for the user
+        client_user_id: '<CLIENT_USER_ID>'
+      }
+
       // Set `closeConfirmation` to `false` to have users skip the confirmation dialog after clicking the close button.
       closeConfirmation: true,
 

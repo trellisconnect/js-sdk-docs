@@ -39,7 +39,7 @@ Easily access a user's insurance information using Trellis Connect.
       // Your trellis API Client-Id
       client_id: '<API_CLIENT_ID>',
   
-      // Optional identifier for your application.
+      // Optional Trellis identifier for your application.
       application_id: '<APPLICATION_ID>'
 
       // The user object allows you to provide additional information about the user to be appended

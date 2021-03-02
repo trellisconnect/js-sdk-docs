@@ -38,7 +38,7 @@ Easily access a user's insurance information using Trellis Connect.
     var handler = TrellisConnect.configure({
       // Your trellis API Client-Id
       client_id: '<API_CLIENT_ID>',
-  
+
       // Optional Trellis identifier for your application.
       application_id: '<APPLICATION_ID>',
 
@@ -51,6 +51,9 @@ Easily access a user's insurance information using Trellis Connect.
 
       // Set `closeConfirmation` to `false` to have users skip the confirmation dialog after clicking the close button.
       closeConfirmation: true,
+
+      // OPTIONAL: Set true to skip qualification questions (e.g. "Do you remember your login?") prior to the credentials page.
+      skipQualificationQuestions: false,
 
       // onSuccess(connectionId, metadata)
       // Called when TrellisConnect has completed retrieving policy information from the user.

@@ -132,6 +132,8 @@ destroy() allows you to remove all DOM artifacts created by JS SDK. This functio
 
 # CHANGELOG
 
+- 5/7/2021
+  - Added `onEvent` api documentation
 - 2/8/2021
   - Added metadata.status to onClose()
 - 7/22/2020

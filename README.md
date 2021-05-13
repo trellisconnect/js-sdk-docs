@@ -91,7 +91,24 @@ Easily access a user's insurance information using Trellis Connect.
         // }
       },
 
-      // onEvent(event, params)
+      // OPTIONAL: onEvent(eventName, metadata)
+      // Called when certain events happen. Supported event names:
+      // - OPEN
+      //     - The user has opened the widget.
+      // - SELECT_ISSUER
+      //     - The user has selected their insurance company.
+      // - SUBMIT_CREDENTIALS
+      //     - The user has submitted the crendetials for their insurance login.
+      // - SUBMIT_MFA
+      //     - The user was prompted with multi-factor authentication and has submitted their code
+      // - AUTH_COMPLETE
+      //     - The user has finished login/authentication for an account.
+      // - TRANSITION_VIEW
+      //     - When the Widget transitions between views.
+      // - CLOSE
+      //     - The flow has been exited. Also calls `onClose` callback.
+      // - ERROR
+      //     - If an error happens during the flow.
       onEvent: handleEvent,
     });
     document.getElementById('openTrellisButton').onclick = handler.open;
@@ -115,6 +132,8 @@ destroy() allows you to remove all DOM artifacts created by JS SDK. This functio
 
 # CHANGELOG
 
+- 5/7/2021
+  - Added `onEvent` api documentation
 - 2/8/2021
   - Added metadata.status to onClose()
 - 7/22/2020

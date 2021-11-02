@@ -18,12 +18,12 @@ Easily access a user's insurance information using Trellis Connect.
   (function () {
     var handler = TrellisConnect.configure({
       // Your Trellis Client-ID
-      client_id: '<API_CLIENT_ID>',
+      client_id: "<API_CLIENT_ID>",
 
       // onSuccess(connectionId, metadata)
       onSuccess: handleTrellisSuccess,
     });
-    document.getElementById('openTrellisButton').onclick = handler.open;
+    document.getElementById("openTrellisButton").onclick = handler.open;
   })();
 </script>
 ```
@@ -37,16 +37,16 @@ Easily access a user's insurance information using Trellis Connect.
   (function () {
     var handler = TrellisConnect.configure({
       // Your trellis API Client-Id
-      client_id: '<API_CLIENT_ID>',
+      client_id: "<API_CLIENT_ID>",
 
       // Optional Trellis identifier for your application.
-      application_id: '<APPLICATION_ID>',
+      application_id: "<APPLICATION_ID>",
 
       // The user object allows you to provide additional information about the user to be appended
       // reports. All fields are optional.
       user: {
         // An identifier you determine and submit for the user
-        client_user_id: '<CLIENT_USER_ID>',
+        client_user_id: "<CLIENT_USER_ID>",
       },
 
       // Set `closeConfirmation` to `false` to have users skip the confirmation dialog after clicking the close button.
@@ -110,8 +110,12 @@ Easily access a user's insurance information using Trellis Connect.
       // - ERROR
       //     - If an error happens during the flow.
       onEvent: handleEvent,
+      // OPTIONAL: Element which you want the Trellis Widget appended to. When not specified, the Trellis Widget will append to the body.
+      // We recommend you add the style `position: realtive` to the container element if you wish the iframe to be contained within the container element.
+      // The iframe overlay is absolutely positioned and will otherwise span outside of the container.
+      containerElement: document.querySelector(".custom-container"),
     });
-    document.getElementById('openTrellisButton').onclick = handler.open;
+    document.getElementById("openTrellisButton").onclick = handler.open;
   })();
 </script>
 ```
@@ -123,7 +127,7 @@ destroy() allows you to remove all DOM artifacts created by JS SDK. This functio
 ```html
 <script>
   // Create the Trellis handler
-  var handler = TrellisConnect.configure({ client_id: '<API_CLIENT_ID>' });
+  var handler = TrellisConnect.configure({ client_id: "<API_CLIENT_ID>" });
 
   // Destroy handler
   handler.destroy();

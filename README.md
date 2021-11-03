@@ -110,6 +110,10 @@ Easily access a user's insurance information using Trellis Connect.
       // - ERROR
       //     - If an error happens during the flow.
       onEvent: handleEvent,
+      // OPTIONAL: Element which you want the Trellis Widget appended to. When not specified, the Trellis Widget will append to the body.
+      // We recommend you add the style `position: relative` to the container element if you want the Trellis Widget overlay to be contained within the container element.
+      // The Trellis Widget overlay is absolutely positioned and will otherwise span outside of the container.
+      containerElement: document.querySelector('.custom-container'),
     });
     document.getElementById('openTrellisButton').onclick = handler.open;
   })();
@@ -132,6 +136,8 @@ destroy() allows you to remove all DOM artifacts created by JS SDK. This functio
 
 # CHANGELOG
 
+- 11/2/2021
+  - Added `containerElement` api documentation
 - 5/7/2021
   - Added `onEvent` api documentation
 - 2/8/2021

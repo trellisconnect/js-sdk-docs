@@ -23,7 +23,7 @@ Easily access a user's insurance information using Trellis Connect.
       // onSuccess(connectionId, metadata)
       onSuccess: handleTrellisSuccess,
     });
-    document.getElementById("openTrellisButton").onclick = handler.open;
+    document.getElementById('openTrellisButton').onclick = handler.open;
   })();
 </script>
 ```

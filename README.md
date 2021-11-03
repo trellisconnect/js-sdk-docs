@@ -18,7 +18,7 @@ Easily access a user's insurance information using Trellis Connect.
   (function () {
     var handler = TrellisConnect.configure({
       // Your Trellis Client-ID
-      client_id: "<API_CLIENT_ID>",
+      client_id: '<API_CLIENT_ID>',
 
       // onSuccess(connectionId, metadata)
       onSuccess: handleTrellisSuccess,
@@ -113,9 +113,9 @@ Easily access a user's insurance information using Trellis Connect.
       // OPTIONAL: Element which you want the Trellis Widget appended to. When not specified, the Trellis Widget will append to the body.
       // We recommend you add the style `position: relative` to the container element if you wish the iframe to be contained within the container element.
       // The iframe overlay is absolutely positioned and will otherwise span outside of the container.
-      containerElement: document.querySelector(".custom-container"),
+      containerElement: document.querySelector('.custom-container'),
     });
-    document.getElementById("openTrellisButton").onclick = handler.open;
+    document.getElementById('openTrellisButton').onclick = handler.open;
   })();
 </script>
 ```

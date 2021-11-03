@@ -111,8 +111,8 @@ Easily access a user's insurance information using Trellis Connect.
       //     - If an error happens during the flow.
       onEvent: handleEvent,
       // OPTIONAL: Element which you want the Trellis Widget appended to. When not specified, the Trellis Widget will append to the body.
-      // We recommend you add the style `position: relative` to the container element if you wish the iframe to be contained within the container element.
-      // The iframe overlay is absolutely positioned and will otherwise span outside of the container.
+      // We recommend you add the style `position: relative` to the container element if you wish the Trellis Widget overlay to be contained within the container element.
+      // The Trellis Widget overlay is absolutely positioned and will otherwise span outside of the container.
       containerElement: document.querySelector('.custom-container'),
     });
     document.getElementById('openTrellisButton').onclick = handler.open;

@@ -7,7 +7,7 @@ Easily access a user's insurance information using Trellis Connect.
 1. Include the Trellis Connect JS SDK on your page.
 2. Configure a handler using `TrellisConnect.configure()` as shown in the example.
 3. Call your handler's `open()` method, and Trellis will present a widget enabling the user to connect his or her insurance account.
-4. Use `connectionId` from the SDK's `onSuccess()` callback to access the user's insurance information. Client applications can use the connection's Temporary Access Key and server applications can use the Secret Key provided by your Trellis account manager.
+4. Use `connectionId` from the SDK's `onSuccess()` callback to access the user's insurance information. Client applications can use the connection's temporary access key and server applications can use the secret key provided by your Trellis account manager.
 
 ## Basic Example
 
@@ -17,7 +17,7 @@ Easily access a user's insurance information using Trellis Connect.
 <script>
   (function () {
     var handler = TrellisConnect.configure({
-      // Your Trellis Client-ID
+      // Your Trellis Client ID
       client_id: '<API_CLIENT_ID>',
 
       // onSuccess(connectionId, metadata)
@@ -36,7 +36,7 @@ Easily access a user's insurance information using Trellis Connect.
 <script>
   (function () {
     var handler = TrellisConnect.configure({
-      // Your trellis API Client-Id
+      // Your trellis API Client-Id.
       client_id: '<API_CLIENT_ID>',
 
       // Optional Trellis identifier for your application.
@@ -45,7 +45,7 @@ Easily access a user's insurance information using Trellis Connect.
       // The user object allows you to provide additional information about the user to be appended
       // reports. All fields are optional.
       user: {
-        // An identifier you determine and submit for the user
+        // An identifier you determine and submit for the user.
         client_user_id: '<CLIENT_USER_ID>',
       },
 
@@ -100,7 +100,7 @@ Easily access a user's insurance information using Trellis Connect.
       // - SUBMIT_CREDENTIALS
       //     - The user has submitted the crendetials for their insurance login.
       // - SUBMIT_MFA
-      //     - The user was prompted with multi-factor authentication and has submitted their code
+      //     - The user was prompted with multi-factor authentication and has submitted their code.
       // - AUTH_COMPLETE
       //     - The user has finished login/authentication for an account.
       // - TRANSITION_VIEW
@@ -136,7 +136,7 @@ destroy() allows you to remove all DOM artifacts created by JS SDK. This functio
 
 ### Exiting JS SDK with exit()
 
-The `exit()` function allows you to programmatically close the Trellis Widget. Calling `exit()` will trigger the `CLOSE` event and `onClose` callback.
+The `exit()` function allows you to programmatically close the Trellis Widget. Calling `exit()` will trigger the `CLOSE` event and `onClose()` callback.
 The `exit()` function takes a single, optional argument, a `boolean`.
 
 #### force (boolean)
@@ -169,19 +169,21 @@ If `true`, the Trellis Widget will exit immediately, bypassing the close confirm
 
 # CHANGELOG
 
+- 11/16/2021
+  - Fix some inconsistencies in the documentation.
 - 11/4/2021
-  - Added `exit()` api documentation
+  - Added `exit()` api documentation.
 - 11/2/2021
-  - Added `containerElement` api documentation
+  - Added `containerElement` api documentation.
 - 5/7/2021
-  - Added `onEvent` api documentation
+  - Added `onEvent()` api documentation.
 - 2/8/2021
-  - Added metadata.status to onClose()
+  - Added `metadata.status` to `onClose()`.
 - 7/22/2020
-  - Updated to use `connectionId` instead of `accountId`
+  - Updated to use `connectionId` instead of `accountId`.
 - 4/28/2020
-  - Added "destroy" documentation
+  - Added `destroy()` documentation.
 - 4/07/2020
-  - Update "onClose" handler to pass metadata that includes the trellisSesssionId.
+  - Update `onClose()` handler to pass metadata that includes the `trellisSesssionId`.
 - 5/10/2019
-  - Renamed "key" to "client_id". The tokens remain the same, this only rename of the field in this SDK. There is an analogous rename in the [API Documentation](https://trellisconnect.com/docs) of the header from X-API-KEY to X-CLIENT-ID. This was done to avoid confusion with the old names of API KEY and API SECRET KEY.
+  - Renamed `key` to `client_id`. The tokens remain the same, this only rename of the field in this SDK. There is an analogous rename in the [API Documentation](https://trellisconnect.com/docs) of the header from `X-API-KEY` to `X-CLIENT-ID`. This was done to avoid confusion with the old names of API KEY and API SECRET KEY.
